@@ -198,7 +198,6 @@
   max-width: 400px;
   margin: 40px auto;
   padding: 20px 25px;
-  border: 1px solid #ddd;
   border-radius: 8px;
   text-align: center;
   font-family: Arial, sans-serif;
@@ -408,3 +407,31 @@
 .footer-right {
   margin-top: 15px;
 }
+
+
+
+.container-wrapper {
+  width: 400px; 
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+@media (max-width: 400px) {
+  .container-wrapper {
+    width: 100vw;
+    overflow: visible;
+  }
+
+  .container {
+    transform-origin: top left;
+
+
+    --scale-factor: calc(100vw / 400);
+
+  
+    transform: scale(var(--scale-factor));
+  }
+}
+
+
